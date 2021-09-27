@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/fav_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/favourite"
+            android:layout_marginTop="20dp"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/no_fav"
+        android:layout_centerInParent="true"
+        android:id="@+id/iskeniche"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/you_have_no_favourite_items_in_list"
+        android:layout_below="@id/iskeniche"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

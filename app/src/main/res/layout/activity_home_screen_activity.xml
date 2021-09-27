@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_screen_activity">
+
+    <include layout="@layout/main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/home"
+        android:layout_above="@+id/bottomtoolbar"
+        android:visibility="gone"/>
+
+    <include layout="@layout/fav_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fav"
+        android:layout_above="@+id/bottomtoolbar"
+        android:visibility="gone"/>
+
+    <include layout="@layout/search_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search"
+        android:layout_above="@+id/bottomtoolbar" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomtoolbar"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:background="@drawable/shape_bg_shadow"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/home"
+                android:id="@+id/home"
+                android:layout_weight="2"
+                app:tint="#f16922"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/favitem"
+                android:id="@+id/favitems"
+                android:layout_weight="2"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_design"
+                android:padding="10dp"
+                android:translationZ="10dp"
+                android:layout_marginTop="-20dp"
+                android:id="@+id/thesearch">
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/find"
+                    android:id="@+id/Searchbar"
+                    android:layout_weight="3"
+                    app:tint="#f16922" />
+
+
+            </RelativeLayout>
+
+
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/notification"
+                android:id="@+id/notifications"
+                android:layout_weight="2"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cart"
+                android:id="@+id/cart"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout> <!-- This is bottom menu of home screen-->
+
+</RelativeLayout>
+
